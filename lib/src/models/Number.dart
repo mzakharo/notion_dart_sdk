@@ -27,7 +27,7 @@ class Number {
           NumberFormat.values, json['number']['format'])!;
     }
     if (isQuery) {
-      number = json['number'].toDobule();
+      number = json['number'].toDouble();
     }
   }
 
