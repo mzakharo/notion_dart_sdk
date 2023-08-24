@@ -80,7 +80,7 @@ class Property {
         value = RichTexts.fromTextList(json['text']);
         break;
       case PropertyType.rich_text:
-        value = RichTexts.empty();
+        value =  RichTexts.fromTextList(json['rich_text']);
         break;
       case PropertyType.select:
         if (isDatabase == true && isQuery == false) {
