@@ -35,13 +35,11 @@ class NotionClient {
   NotionClient({
     required this.httpClient,
     required this.apiKey,
-    this.notionVersion = '2021-05-13',
+    this.notionVersion = '2022-06-28',
   }) {
     var headers = <String, String>{
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
       'Authorization': 'Bearer $apiKey',
-      'NotionVersion': notionVersion,
+      'Notion-Version': notionVersion,
     };
     blockApi = BlockAPI(httpClient: httpClient, headers: headers);
     pageApi = PageAPI(httpClient: httpClient, headers: headers);
